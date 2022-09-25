@@ -1,0 +1,105 @@
+:root {
+    --width-mobile: 375px;
+    --width-desktop: 1440px;
+
+    --primary-orange: hsl(25, 97%, 53%);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-light-gray: hsl(217, 12%, 63%);
+    --neutral-medium-gray: hsl(216, 12%, 54%);
+    --neutral-dark-blue: hsl(213, 19%, 18%);
+    --neutral-very-dark-blue: hsl(216, 12%, 8%);
+
+    --fz-paragraph: 15px;
+
+    --font-family: 'Overpass', sans-serif;
+    --fw-bold: 700;
+    --fw-regular: 400;
+}
+
+body {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: black;
+    font-family: var(--font-family);
+}
+
+.card {
+    background: radial-gradient(circle at top, var(--neutral-dark-blue), var(--neutral-very-dark-blue));
+    max-width: var(--width-desktop);
+    border-radius: 30px;
+}
+
+.star{
+    display: block;
+    background: var(--neutral-dark-blue);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    margin: 1.75rem;
+}
+
+.star > svg {
+    margin: 1rem;
+}
+
+.title {
+    color: var(--neutral-white);
+    margin: 1.75rem;
+}
+
+p {
+    color: var(--neutral-medium-gray);
+    margin: 1.75rem;
+    font-size: var(--fz-paragraph);
+}
+
+.rating input[type='radio']{
+    display: none;
+}
+
+
+
+.rating label {
+    color: var(--neutral-medium-gray);
+    background: var(--neutral-dark-blue);
+    padding: 1.66rem 2rem;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rating input[type='radio']:checked+label {
+    background: red;
+    color: red;
+}
+
+.rating label:hover {
+    background: var(--primary-orange);
+    color: var(--neutral-white)
+}
+.submit {
+    display: block;
+    border: none;
+    min-width: 100%;
+    background: var(--primary-orange);
+    color: var(--neutral-white);
+    border-radius: 2em;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    padding: 1em 5em 1em 5em;
+    margin: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit:hover {
+    background-color: var(--neutral-white);
+    color: var(--primary-orange);
+}
