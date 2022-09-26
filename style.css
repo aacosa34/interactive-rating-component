@@ -31,6 +31,7 @@ body {
 .card {
     background: radial-gradient(circle at top, var(--neutral-dark-blue), var(--neutral-very-dark-blue));
     max-width: var(--width-desktop);
+    min-width: var(--width-mobile);
     border-radius: 30px;
 }
 
@@ -58,11 +59,14 @@ p {
     font-size: var(--fz-paragraph);
 }
 
+fieldset {
+    text-align: center;
+    border: none;
+}
+
 .rating input[type='radio']{
     display: none;
 }
-
-
 
 .rating label {
     color: var(--neutral-medium-gray);
@@ -71,13 +75,14 @@ p {
     display: inline-block;
     border-radius: 100%;
     margin: 2rem;
+    margin-top: 0.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.rating input[type='radio']:checked+label {
-    background: red;
-    color: red;
+.rating fieldset input[type='radio']:checked + label {
+    background: var(--neutral-light-gray);
+    color: var(--neutral-white);
 }
 
 .rating label:hover {
@@ -85,16 +90,18 @@ p {
     color: var(--neutral-white)
 }
 .submit {
-    display: block;
+    display: flex;
+    justify-content: center;
+    width: 95%;
     border: none;
-    min-width: 100%;
     background: var(--primary-orange);
     color: var(--neutral-white);
     border-radius: 2em;
     font-family: var(--font-family);
     text-transform: uppercase;
-    padding: 1em 5em 1em 5em;
-    margin: 2rem;
+    padding: 1rem 5rem;
+    margin: auto;
+    margin-bottom: 1em;
     cursor: pointer;
     transition: all 0.3s ease;
 }
